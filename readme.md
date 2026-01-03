@@ -1,4 +1,15 @@
-Esta pagina web esta pensada para una universidad, donde un usuario externo puede obtener información sobre la misma, realizar consultas e incribirse en una carrera. Tambíen esta pensada para que haya un usuario Administrador donde pueda visualizar las inscripciones y editarlas si fuese necesario.
+Sistema de Gestión Universitaria (MVC PHP)
+Este proyecto es una plataforma web integral diseñada para instituciones educativas. Permite a los futuros estudiantes obtener información, realizar consultas y pre-inscribirse en carreras, mientras ofrece un panel administrativo para la gestión de datos.
 
-Esta web se encuentra basada en el patrón de diseño Modelo Vista Controlador. A su vez utiliza sentencias preparadas Mysqli y PDO para trabajar con Mysql, JS y AJAX.
+🚀 Características
+Arquitectura MVC: Construido bajo el patrón de diseño Modelo-Vista-Controlador para una separación clara de responsabilidades y escalabilidad.
 
+Gestión de Consultas: Los usuarios pueden enviar dudas a través de un formulario de contacto.
+
+Sistema de Inscripciones: Módulo de registro para que los estudiantes se postulen a diferentes carreras.
+
+Panel de Administración: Permite a los administradores visualizar, editar y gestionar los registros de inscripción.
+
+Seguridad de Datos: Implementación de sentencias preparadas con MySQLi y PDO para prevenir ataques de inyección SQL.
+
+Interactividad: Uso de AJAX y JavaScript para mejorar la experiencia de usuario sin recargas de página innecesarias.

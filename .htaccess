@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Redirigir todo a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?ruta=$1 [L,QSA]
+
+# Proteger archivos sensibles
+<FilesMatch "\.(php|sql|log|txt)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Permitir acceso solo a archivos necesarios
+<Files "index.php">
+    Allow from all
+</Files>
+<Files "\.(css|js|jpg|png|gif)$">
+    Allow from all
+</Files>

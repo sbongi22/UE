@@ -19,7 +19,7 @@
                     <li> <a href="index.php?ruta=contacto">Contacto</a></li>
                     <li> <a href="index.php?ruta=registro">Inscripcion</a></li>
                     <li> <a href="index.php?ruta=ingreso">Administrador</a>
-                    <li> <a href="index.php?ruta=admin"></a>
+                    <!--<li> <a href="index.php?ruta=admin"></a>-->
                     <li> <a href="index.php?ruta=salir">Salir</a></li>
                     <img class="logo-header" src="img/ue.jpg" alt="logo">
                 </ul>

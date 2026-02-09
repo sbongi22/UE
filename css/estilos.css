@@ -1,178 +1,658 @@
+/* ==========================================================================
+   RESET Y ESTILOS BASE
+   ========================================================================== */
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.home{
-    background-color: rgba(250, 250, 250, 0.808);
-    text-align: center;
-}
-
-hr{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-h1{
-    padding: 1rem;
-}
-
-h2{
-    padding: 1rem;
-}
-
-h4{
-    padding: 1rem;
-}
-
-p{
-    padding: 3rem;
-    text-align: justify;
-    text-align: center;
-    font-weight: 400;
-}
-
-.error {
-    background-color: rgba(191, 35, 35, 0.878);
-}
-
-.foto_inscriptos{
-    width: 200px;
-    height: 200px;
-}
-
-.caja_inscripciones {
-    background-color:  #ffffffd0;
-    padding: 2rem;
-    margin: 1rem;
-    width: 30%;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    padding: 4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 0;
     background-image: url("../img/universidad.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    background-color: #ffffffd0;
+    background-color: #eaeaea;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.carreras_contenido{
-    background-color: rgba(250, 250, 250, 0.808);
-    padding: 2rem;
-    font-weight: 400;
+/* ==========================================================================
+   CONTENEDOR PRINCIPAL Y LAYOUT
+   ========================================================================== */
+body > div {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    flex: 1;
 }
 
-.carreras_descripcion{
-    padding: 1rem;
-    background-color: rgba(250, 250, 250, 0.808);
-}
-
+/* ==========================================================================
+   BARRA DE NAVEGACIÓN (BOTONERA PRINCIPAL) - CORREGIDO
+   ========================================================================== */
 .botonera_principal {
-    border-left: 5rem solid rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    padding: 2rem;
+    background: linear-gradient(135deg, #2c2c2c 0%, #404040 100%);
+    padding: 1rem 2rem;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+    border-left: none;
+    position: relative;
+    z-index: 100;
 }
 
 .botonera_principal ul {
     list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .botonera_principal li {
     display: inline-block;
-    padding-left: 1rem;
+    padding: 0;
+    margin-right: 0.5rem;
 }
 
 .botonera_principal a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #ffffff;
     font-weight: 600;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
 }
 
+/* CORRECCIÓN: Eliminamos el transform: translateY y usamos otros efectos */
+.botonera_principal a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.botonera_principal a:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   LOGOTIPO
+   ========================================================================== */
+.logo-header {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    padding: 4px;
+}
+
+.logo-footer {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin-right: 15px;
+    background-color: white;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   SECCIONES GENERALES
+   ========================================================================== */
+hr {
+    margin: 2.5rem auto;
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(100, 100, 100, 0.3), transparent);
+    width: 90%;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #222222;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    padding: 1rem 0;
+    font-size: 2.2rem;
+    border-bottom: 3px solid #555555;
+    text-align: center;
+    color: #2a2a2a;
+}
+
+h2 {
+    padding: 0.8rem 0;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #777777;
+    margin-bottom: 1.5rem;
+    color: #333333;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #444444;
+}
+
+h4 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #555555;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid #888888;
+}
+
+p {
+    padding: 0.8rem 0;
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #444444;
+}
+
+/* ==========================================================================
+   SECCIÓN HOME
+   ========================================================================== */
+.home {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.home h2 {
+    margin-top: 2rem;
+    color: #3a3a3a;
+}
+
+.home p {
+    padding: 0.5rem 0;
+    margin-bottom: 1.2rem;
+}
+
+/* ==========================================================================
+   SECCIÓN CARRERAS
+   ========================================================================== */
+.carreras_contenido {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.carreras_contenido ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.carreras_contenido li {
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+    background-color: rgba(100, 100, 100, 0.07);
+    border-radius: 10px;
+    border-left: 4px solid #666666;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #444444;
+}
+
+/* CORRECCIÓN: Mantenemos el efecto de desplazamiento solo para elementos de lista, no para navegación */
+.carreras_contenido li:hover {
+    background-color: rgba(100, 100, 100, 0.12);
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carreras_descripcion {
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    margin-top: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+/* ==========================================================================
+   FORMULARIOS (CONTACTO Y REGISTRO)
+   ========================================================================== */
 .contacto__box {
-    margin: 5rem auto;
-    background-color: rgba(250, 250, 250, 0.808);
-    padding: 5rem 20rem;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .form {
     display: flex;
     flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form label {
+    font-weight: 600;
+    color: #444444;
+    margin-bottom: 0.3rem;
+    display: block;
 }
 
 .contacto__input {
-    background-color: rgb(206, 210, 209);
-    padding: 0.5rem;
+    background-color: #f9f9f9;
+    padding: 0.85rem 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    color: #555555;
 }
 
+.contacto__input:focus {
+    outline: none;
+    border-color: #888888;
+    box-shadow: 0 0 0 3px rgba(136, 136, 136, 0.15);
+    background-color: white;
+}
+
+.contacto__input:hover {
+    border-color: #cccccc;
+}
+
+select.contacto__input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px;
+    padding-right: 2.5rem;
+}
+
+textarea.contacto__input {
+    min-height: 150px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   BOTONES - CORREGIDOS
+   ========================================================================== */
 .btn_enviar {
-    background-color: black;
+    background: linear-gradient(135deg, #555555 0%, #333333 100%);
     color: white;
     text-align: center;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 1.5rem 0 0.5rem 0;
+    padding: 1rem 2rem;
     font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-.contenedor-img{
+/* CORRECCIÓN: Usamos un efecto más sutil en lugar de translateY */
+.btn_enviar:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #666666 0%, #444444 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn_enviar:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   TABLA DE ADMINISTRACIÓN (ESTILO CARDS)
+   ========================================================================== */
+.tabla {
+    background-color: transparent;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.tabla thead {
+    color: #222222;
+    background-color: transparent;
+}
+
+.tabla th {
+    text-align: left;
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: #666666;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.tabla tbody tr {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tabla td {
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    border: none;
+    color: #555555;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* CORRECCIÓN: Mantenemos el efecto en las filas de tabla pero es más controlado */
+.tabla tbody tr:hover {
+    transform: translateY(-2px); /* Reducido de -4px */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+    background-color: white;
+    color: #555555;
+}
+
+.tabla tbody tr:hover td {
+    background-color: white;
+}
+
+/* ==========================================================================
+   BOTONES DE ACCIÓN EN TABLA - CORREGIDOS
+   ========================================================================== */
+.tabla td > div {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+a.boton_editar {
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, #666666 0%, #555555 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+/* CORRECCIÓN: Sin movimiento vertical en botones */
+a.boton_editar:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #777777 0%, #666666 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.boton_borrar {
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #888888 0%, #666666 100%);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+/* CORRECCIÓN: Sin movimiento vertical en botones */
+.boton_borrar:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #999999 0%, #777777 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   ALERTAS Y MENSAJES
+   ========================================================================== */
+.alerta {
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    font-weight: 500;
+    border-left: 5px solid;
+}
+
+.alerta-advertencia {
+    background-color: rgba(200, 150, 50, 0.1);
+    border-color: #b08c3c;
+    color: #5c471f;
+}
+
+.alerta-exito {
+    background-color: rgba(100, 150, 100, 0.1);
+    border-color: #5a8d5a;
+    color: #2d452d;
+}
+
+.alerta-danger {
+    background-color: rgba(200, 100, 100, 0.1);
+    border-color: #a55a5a;
+    color: #552b2b;
+}
+
+.alerta-actulizar {
+    background-color: rgba(120, 120, 150, 0.1);
+    border-color: #6a6a8a;
+    color: #353547;
+}
+
+.error {
+    background-color: rgba(150, 50, 50, 0.1);
+    color: #552222;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid rgba(150, 50, 50, 0.2);
+    margin: 2rem 0;
+    background-color: rgba(200, 200, 200, 0.9);
+}
+
+/* ==========================================================================
+   ELEMENTOS ADICIONALES
+   ========================================================================== */
+.foto_inscriptos {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.caja_inscripciones {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 2rem;
+    margin: 1rem;
+    width: 30%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.caja_inscripciones:hover {
+    transform: translateY(-3px); /* Reducido de -5px */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contenedor-img {
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    padding: 2rem;
 }
 
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 footer {
-    background-color: rgba(250, 250, 250, 0.555);
-    position: static;
-    bottom: 5px;
-    margin: 10px;
-}
-
-.logo-header{
-    position: absolute;
-    right: 5rem;
-    top: 5rem;
-    width: 50px;
-    height: 50px;
-}
-
-.logo-footer {
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 50px;
-    height: 50px;
-}
-
-.tabla {
-    background-color: rgba(250, 250, 250, 0.808);
-    border-collapse: collapse;
-    width: 100%;
-    margin: 0 auto;
-    margin-right: auto;
-  }
-  
-  thead {
-    color: rgb(36, 36, 36);
-  }
-  
-  th,
-  td {
+    background: linear-gradient(135deg, #333333 0%, #222222 100%);
+    color: white;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 12px 12px 0 0;
     text-align: center;
-    padding: 5px 0;
-  }
-  
-  tbody tr:hover {
-    background: #66b9daa9;
-    color: #565a5d;
-  }
-  a.boton_editar {
-    border-radius: 16px;
-    padding: 10px 15px;
-  }
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
 
-  .boton_borrar {
-    border-radius: 16px;
-    border: 2px solid red;
-    background-color: red;
-    padding: 10px 15px;
-  }
+footer h3 {
+    color: #ffffff;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.3rem;
+}
+
+/* ==========================================================================
+   EFECTOS DE ACENTO Y DETALLES - CORREGIDOS
+   ========================================================================== */
+.botonera_principal a,
+.btn_enviar,
+a.boton_editar,
+.boton_borrar {
+    transition: all 0.2s ease; /* Transición más rápida */
+}
+
+/* Efecto de brillo sutil en lugar de movimiento */
+.botonera_principal a:hover::before,
+.btn_enviar:hover::before,
+a.boton_editar:hover::before,
+.boton_borrar:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    border-radius: inherit;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .contacto__box {
+        padding: 2rem;
+    }
+    
+    .botonera_principal ul {
+        justify-content: center;
+    }
+    
+    .logo-header {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body > div {
+        padding: 0 15px;
+    }
+    
+    .botonera_principal ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .botonera_principal li {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .botonera_principal a {
+        display: block;
+        text-align: center;
+    }
+    
+    .logo-header {
+        position: static;
+        margin: 1rem auto;
+        display: block;
+    }
+    
+    .tabla {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .caja_inscripciones {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    .contacto__box {
+        padding: 1.5rem;
+    }
+    
+    .tabla td > div {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .home, .carreras_contenido, .contacto__box {
+        padding: 1.5rem;
+    }
+}

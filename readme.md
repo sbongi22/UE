@@ -1,18 +1,37 @@
-Sistema de Gestión Universitaria (MVC PHP)
+Universidad de Edifier - Sistema de Gestión Académica
 
-Este proyecto es una plataforma web integral diseñada para instituciones educativas. Permite a los futuros estudiantes obtener información, realizar consultas y pre-inscribirse en carreras, mientras ofrece un panel administrativo para la gestión de datos.
+Este proyecto es una plataforma web integral diseñada para la gestión de inscripciones y administración de datos estudiantiles. Fue desarrollado utilizando el patrón MVC (Modelo-Vista-Controlador) en PHP, garantizando una arquitectura limpia, escalable y profesional.
 
-🚀 Características
+🚀 Características Principales
+Gestión de Inscripciones: Formulario dinámico para que los estudiantes se postulen a diversas carreras.
 
-Arquitectura MVC: Construido bajo el patrón de diseño Modelo-Vista-Controlador para una separación clara de responsabilidades y escalabilidad.
+Panel Administrativo: Interfaz protegida para la visualización, edición y eliminación de registros (CRUD completo).
 
-Gestión de Consultas: Los usuarios pueden enviar dudas a través de un formulario de contacto.
+Validación Asíncrona: Uso de AJAX y jQuery para verificar la existencia de correos electrónicos en tiempo real sin recargar la página.
 
-Sistema de Inscripciones: Módulo de registro para que los estudiantes se postulen a diferentes carreras.
+Seguridad: Implementación de sentencias preparadas y controladores para mitigar riesgos de inyección SQL.
 
-Panel de Administración: Permite a los administradores visualizar, editar y gestionar los registros de inscripción.
+Diseño Institucional: Interfaz estructurada mediante una plantilla maestra (plantilla.php) que unifica la experiencia de usuario.
 
-Seguridad de Datos: Implementación de sentencias preparadas con MySQLi y PDO para prevenir ataques de inyección SQL.
+🛠️ Tecnologías Utilizadas
+Backend: PHP (Arquitectura MVC).
 
-Interactividad: Uso de AJAX y JavaScript para mejorar la experiencia de usuario sin recargas de página innecesarias.
+Frontend: HTML5, CSS3, JavaScript y jQuery.
 
+Base de Datos: MySQL (utilizando PDO/MySQLi).
+
+Herramientas: AJAX para interactividad fluida.
+
+📂 Estructura del Proyecto
+El proyecto se organiza de la siguiente manera para separar la lógica de negocio de la visualización:
+
+Bash
+├── ajax/               # Archivos para el procesamiento de peticiones AJAX
+├── controladores/      # Lógica de negocio (ControladorFormularios)
+├── modelos/            # Interacción con la base de datos
+├── paginas/            # Vistas individuales (home, admin, registro, etc.)
+├── vistas/             # Carpeta principal de archivos front-end
+│   ├── css/            # Estilos del sistema
+│   ├── js/             # Lógica de cliente (script.js)
+│   └── plantilla.php   # Estructura maestra del sitio
+└── index.php           # Punto de entrada único del sistema

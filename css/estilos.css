@@ -1,6 +1,4 @@
-/* ==========================================================================
-   RESET Y ESTILOS BASE
-   ========================================================================== */
+/* RESET Y ESTILOS BASE */
 * {
     padding: 0;
     margin: 0;
@@ -28,9 +26,7 @@ body {
     flex-direction: column;
 }
 
-/* ==========================================================================
-   CONTENEDOR PRINCIPAL Y LAYOUT
-   ========================================================================== */
+/*    CONTENEDOR PRINCIPAL */
 body > div {
     max-width: 1100px;
     margin: 0 auto;
@@ -39,9 +35,7 @@ body > div {
     flex: 1;
 }
 
-/* ==========================================================================
-   BARRA DE NAVEGACIÓN (BOTONERA PRINCIPAL) - CORREGIDO
-   ========================================================================== */
+/* BARRA DE NAVEGACIÓN */
 .botonera_principal {
     background: linear-gradient(135deg, #2c2c2c 0%, #404040 100%);
     padding: 1rem 2rem;
@@ -82,7 +76,6 @@ body > div {
     position: relative;
 }
 
-/* CORRECCIÓN: Eliminamos el transform: translateY y usamos otros efectos */
 .botonera_principal a:hover {
     background-color: rgba(255, 255, 255, 0.25);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
@@ -93,9 +86,7 @@ body > div {
     transform: scale(0.98);
 }
 
-/* ==========================================================================
-   LOGOTIPO
-   ========================================================================== */
+/* LOGO */
 .logo-header {
     position: absolute;
     right: 1.5rem;
@@ -121,9 +112,7 @@ body > div {
     vertical-align: middle;
 }
 
-/* ==========================================================================
-   SECCIONES GENERALES
-   ========================================================================== */
+/* SECCIONES GENERALES */
 hr {
     margin: 2.5rem auto;
     border: none;
@@ -177,9 +166,7 @@ p {
     color: #444444;
 }
 
-/* ==========================================================================
-   SECCIÓN HOME
-   ========================================================================== */
+/* HOME */
 .home {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 2.5rem;
@@ -199,9 +186,7 @@ p {
     margin-bottom: 1.2rem;
 }
 
-/* ==========================================================================
-   SECCIÓN CARRERAS
-   ========================================================================== */
+/* SECCIÓN CARRERAS */
 .carreras_contenido {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 2.5rem;
@@ -227,7 +212,6 @@ p {
     color: #444444;
 }
 
-/* CORRECCIÓN: Mantenemos el efecto de desplazamiento solo para elementos de lista, no para navegación */
 .carreras_contenido li:hover {
     background-color: rgba(100, 100, 100, 0.12);
     transform: translateX(5px);
@@ -242,9 +226,7 @@ p {
     border: 1px solid rgba(0, 0, 0, 0.07);
 }
 
-/* ==========================================================================
-   FORMULARIOS (CONTACTO Y REGISTRO)
-   ========================================================================== */
+/* FORMULARIOS (CONTACTO Y REGISTRO) */
 .contacto__box {
     margin: 2rem auto;
     background-color: rgba(255, 255, 255, 0.98);
@@ -306,9 +288,7 @@ textarea.contacto__input {
     font-family: inherit;
 }
 
-/* ==========================================================================
-   BOTONES - CORREGIDOS
-   ========================================================================== */
+/* BOTONES */
 .btn_enviar {
     background: linear-gradient(135deg, #555555 0%, #333333 100%);
     color: white;
@@ -326,7 +306,6 @@ textarea.contacto__input {
     position: relative;
 }
 
-/* CORRECCIÓN: Usamos un efecto más sutil en lugar de translateY */
 .btn_enviar:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     background: linear-gradient(135deg, #666666 0%, #444444 100%);
@@ -337,9 +316,7 @@ textarea.contacto__input {
     transform: scale(0.98);
 }
 
-/* ==========================================================================
-   TABLA DE ADMINISTRACIÓN (ESTILO CARDS)
-   ========================================================================== */
+/* TABLA DE ADMINISTRACIÓN */
 .tabla {
     background-color: transparent;
     border-collapse: separate;
@@ -381,9 +358,8 @@ textarea.contacto__input {
     border-top: 1px solid #f0f0f0;
 }
 
-/* CORRECCIÓN: Mantenemos el efecto en las filas de tabla pero es más controlado */
 .tabla tbody tr:hover {
-    transform: translateY(-2px); /* Reducido de -4px */
+    transform: translateY(-2px); 
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
     background-color: white;
     color: #555555;
@@ -393,9 +369,6 @@ textarea.contacto__input {
     background-color: white;
 }
 
-/* ==========================================================================
-   BOTONES DE ACCIÓN EN TABLA - CORREGIDOS
-   ========================================================================== */
 .tabla td > div {
     display: flex;
     gap: 0.8rem;
@@ -418,7 +391,6 @@ a.boton_editar {
     position: relative;
 }
 
-/* CORRECCIÓN: Sin movimiento vertical en botones */
 a.boton_editar:hover {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
     background: linear-gradient(135deg, #777777 0%, #666666 100%);
@@ -439,16 +411,13 @@ a.boton_editar:hover {
     position: relative;
 }
 
-/* CORRECCIÓN: Sin movimiento vertical en botones */
 .boton_borrar:hover {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
     background: linear-gradient(135deg, #999999 0%, #777777 100%);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ==========================================================================
-   ALERTAS Y MENSAJES
-   ========================================================================== */
+/* ALERTAS Y MENSAJES */
 .alerta {
     padding: 1rem 1.5rem;
     border-radius: 10px;
@@ -493,9 +462,7 @@ a.boton_editar:hover {
     background-color: rgba(200, 200, 200, 0.9);
 }
 
-/* ==========================================================================
-   ELEMENTOS ADICIONALES
-   ========================================================================== */
+/* ELEMENTOS ADICIONALES */
 .foto_inscriptos {
     width: 200px;
     height: 200px;
@@ -517,7 +484,7 @@ a.boton_editar:hover {
 }
 
 .caja_inscripciones:hover {
-    transform: translateY(-3px); /* Reducido de -5px */
+    transform: translateY(-3px); 
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -527,9 +494,7 @@ a.boton_editar:hover {
     padding: 2rem;
 }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
+/* FOOTER */
 footer {
     background: linear-gradient(135deg, #333333 0%, #222222 100%);
     color: white;
@@ -555,7 +520,7 @@ footer h3 {
 .btn_enviar,
 a.boton_editar,
 .boton_borrar {
-    transition: all 0.2s ease; /* Transición más rápida */
+    transition: all 0.2s ease; 
 }
 
 /* Efecto de brillo sutil en lugar de movimiento */

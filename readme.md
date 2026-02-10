@@ -21,17 +21,3 @@ Frontend: HTML5, CSS3, JavaScript y jQuery.
 Base de Datos: MySQL (utilizando PDO/MySQLi).
 
 Herramientas: AJAX para interactividad fluida.
-
-📂 Estructura del Proyecto
-El proyecto se organiza de la siguiente manera para separar la lógica de negocio de la visualización:
-
-Bash
-├── ajax/               # Archivos para el procesamiento de peticiones AJAX
-├── controladores/      # Lógica de negocio (ControladorFormularios)
-├── modelos/            # Interacción con la base de datos
-├── paginas/            # Vistas individuales (home, admin, registro, etc.)
-├── vistas/             # Carpeta principal de archivos front-end
-│   ├── css/            # Estilos del sistema
-│   ├── js/             # Lógica de cliente (script.js)
-│   └── plantilla.php   # Estructura maestra del sitio
-└── index.php           # Punto de entrada único del sistema

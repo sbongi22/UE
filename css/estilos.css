@@ -513,9 +513,7 @@ footer h3 {
     font-size: 1.3rem;
 }
 
-/* ==========================================================================
-   EFECTOS DE ACENTO Y DETALLES - CORREGIDOS
-   ========================================================================== */
+/* EFECTOS DE ACENTO Y DETALLES - CORREGIDOS */
 .botonera_principal a,
 .btn_enviar,
 a.boton_editar,
@@ -537,6 +535,62 @@ a.boton_editar:hover::before,
     background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
     border-radius: inherit;
     z-index: 1;
+}
+
+
+/* TABLA ADMIN */
+.admin-section {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.tabla-container {
+    overflow-x: auto; 
+    padding: 5px;
+}
+
+.badge-carrera {
+    background-color: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #444;
+    border: 1px solid #ddd;
+}
+
+.acciones-wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.col-id {
+    font-weight: bold;
+    color: #888;
+}
+
+.col-nombre {
+    color: #2c3e50;
+}
+
+.tabla tbody tr:hover td {
+    background-color: #fcfcfc;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.boton_editar, .boton_borrar {
+    white-space: nowrap;
+    min-width: 80px;
+    text-align: center;
 }
 
 /* ==========================================================================

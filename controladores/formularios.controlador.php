@@ -81,50 +81,45 @@ class ControladorFormularios
 	}
 
 	// Ingreso
-	public function ctrIngreso()
-	{
+public function ctrIngreso()
+{
+    if (isset($_POST["ingresoEmail"])) {
 
-		if (isset($_POST["ingresoEmail"])) {
+        $tabla = "registros";
+        $item = "email";
+        $valor = $_POST["ingresoEmail"];
 
-			$tabla = "registros";
-			$item = "email";
-			$valor = $_POST["ingresoEmail"];
+        $respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
-			$respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
+        // Agregamos validación
+        if (is_array($respuesta)) {
 
-			$encriptarPassword = crypt($_POST["ingresoPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
+            $encriptarPassword = crypt($_POST["ingresoPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
-			if ($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $encriptarPassword) {
+            if ($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $encriptarPassword) {
 
-				$_SESSION["validarIngreso"] = "ok";
+                $_SESSION["validarIngreso"] = "ok";
 
-				echo '<script>
+                echo '<script>
+                    if ( window.history.replaceState ) {
+                        window.history.replaceState( null, null, window.location.href );
+                    }
+                    window.location = "index.php?ruta=admin";
+                </script>';
+                return; // Cortamos la ejecución si entra bien
+            }
+        }
 
-					if ( window.history.replaceState ) {
+        // Si el usuario no existe o la contraseña no coincide:
+        echo '<script>
+            if ( window.history.replaceState ) {
+                window.history.replaceState( null, null, window.location.href );
+            }
+        </script>';
 
-						window.history.replaceState( null, null, window.location.href );
-
-					}
-
-					window.location = "index.php?ruta=admin";
-
-				</script>';
-			} else {
-
-				echo '<script>
-
-					if ( window.history.replaceState ) {
-
-						window.history.replaceState( null, null, window.location.href );
-
-					}
-
-				</script>';
-
-				echo '<div class="alert alert-danger">Error al ingresar al sistema, el usuario o la contraseña es incorrecta</div>';
-			}
-		}
-	}
+        echo '<div class="alerta alerta-danger">Error al ingresar al sistema, el usuario o la contraseña es incorrecta</div>';
+    }
+}
 
 
 	// Actualizar registro

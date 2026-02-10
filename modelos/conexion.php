@@ -1,11 +1,28 @@
 <?php
 class Conexion{
+
+//static public function conectar(){
+//         $host = "localhost"; 
+//         $dbname = "universidad_db"; 
+//         $user = "root"; 
+//         $pass = ""; 
+        
+//         try {
+//             $link = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+//             $link->exec("set names utf8");
+//             $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//             return $link;
+//         } catch(PDOException $e) {
+//             die("Error de conexión local: " . $e->getMessage());
+//         }
+//     }
+// }
+
     static public function conectar(){
-        // EJEMPLO con datos REALES de InfinityFree
-        $host = "sql105.infinityfree.com"; // TU host real
-        $dbname = "if0_41092513_db_universidad"; // TU base de datos
-        $user = "if0_41092513"; // TU usuario
-        $pass = "NuevaPass2026"; // TU password real
+        $host = "sql105.infinityfree.com"; // HOST
+        $dbname = "if0_41092513_db_universidad"; // BD
+        $user = "if0_41092513"; // usuario
+        $pass = "NuevaPass2026"; // password
         
         try {
             $link = new PDO("mysql:host=$host;dbname=$dbname", 

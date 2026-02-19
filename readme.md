@@ -1,8 +1,8 @@
-Universidad de Edifier - Sistema de Gestión Académica
+# Universidad de Edifier - Sistema de Gestión Académica
 
 Este proyecto es una plataforma web integral diseñada para la gestión de inscripciones y administración de datos estudiantiles. Fue desarrollado utilizando el patrón MVC (Modelo-Vista-Controlador) en PHP, garantizando una arquitectura limpia, escalable y profesional.
 
-🚀 Características Principales
+## Características Principales
 Gestión de Inscripciones: Formulario dinámico para que los estudiantes se postulen a diversas carreras.
 
 Panel Administrativo: Interfaz protegida para la visualización, edición y eliminación de registros (CRUD completo).
@@ -13,7 +13,7 @@ Seguridad: Implementación de sentencias preparadas y controladores para mitigar
 
 Diseño Institucional: Interfaz estructurada mediante una plantilla maestra (plantilla.php) que unifica la experiencia de usuario.
 
-🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 Backend: PHP (Arquitectura MVC).
 
 Frontend: HTML5, CSS3, JavaScript y jQuery.
